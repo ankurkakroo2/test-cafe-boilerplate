@@ -1,7 +1,12 @@
-name: Input URL action
-author: Ankur Kakroo
+name: 'Input URL action'
+author: 'Ankur Kakroo'
 description: 'test'
 
+runs:
+  using: 'node12'
+  main: 'main.js'
+  env:
+    name: 'octocat'
 inputs:
   url:
     description: 'A test variable'

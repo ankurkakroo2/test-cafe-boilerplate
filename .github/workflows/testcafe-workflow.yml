@@ -19,7 +19,7 @@ jobs:
       - name: Set Page Url
         uses: allenevans/set-env@v1.0.0
         with:
-          MY_ENV_VAR: 'my value'
+          URL: 'https://oye-harry-react-hn.herokuapp.com/'
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
