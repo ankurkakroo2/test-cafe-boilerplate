@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Test cafe boilerplate",
   "scripts": {
-    "test": "testcafe chrome tests/index-test.js --app \"node server.js\""
+    "test": "testcafe chrome tests/index-test.js"
   },
   "repository": {
     "type": "git",
