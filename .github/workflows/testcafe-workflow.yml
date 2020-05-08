@@ -16,5 +16,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run test
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run tests
+        uses: DevExpress/testcafe-action@latest
+        with:
+          version: latest
+          args: "chrome tests/index-test.js"
