@@ -1,5 +1,5 @@
 name: E2E
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -8,8 +8,15 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+
     steps:
-      - name: Checkout
+      - name: Hello world
+        run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
+        env:
+          FIRST_NAME: Ankur
+          LAST_NAME: Kakroo
+
+      - name: Checkout Code
         uses: actions/checkout@v1
 
       - name: Use Node.js ${{ matrix.node-version }}
@@ -19,6 +26,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Test
+        run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
 
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
