@@ -35,3 +35,6 @@ jobs:
         with:
           version: latest
           args: "chrome tests/index-test.js"
+        env:
+          FIRST_NAME: Ankur-2
+          LAST_NAME: Kakroo
