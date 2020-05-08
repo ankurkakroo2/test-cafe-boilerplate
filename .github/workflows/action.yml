@@ -1,0 +1,8 @@
+name: Input URL action
+author: Ankur Kakroo
+description: 'test'
+
+inputs:
+  url:
+    description: 'A test variable'
+    required: true

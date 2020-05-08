@@ -10,14 +10,18 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - name: Hello world
-        run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
-        env:
-          FIRST_NAME: Ankur
-          LAST_NAME: Kakroo
-
       - name: Checkout Code
         uses: actions/checkout@v1
+
+      - name: set environment variables
+        uses: allenevans/set-env@v1.0.0
+        with:
+          MY_ENV_VAR: 'my value'
+
+      - name: Printenv
+        run: |
+          echo "MY_ENV_VAR=${MY_ENV_VAR}"
+          printenv
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
