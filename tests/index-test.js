@@ -1,6 +1,7 @@
 import { Selector } from 'testcafe';
+import React from 'react';
 
-console.log('process', process.env);
+console.log('React', React);
 
 fixture`Check if the button text changes`
   .page`https://oye-harry-react-hn.herokuapp.com/`;
