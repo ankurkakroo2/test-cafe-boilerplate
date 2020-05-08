@@ -13,8 +13,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
 
-      - name: Enter Url
-        uses: actions/input-url@master
+      # - name: Enter Url
+      #   uses: actions/input-url@master
 
       - name: Set Page Url
         uses: allenevans/set-env@v1.0.0
