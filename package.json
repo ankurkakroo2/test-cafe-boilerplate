@@ -1,0 +1,18 @@
+{
+  "name": "test-cafe-boilerplate",
+  "version": "1.0.0",
+  "description": "Test cafe boilerplate",
+  "scripts": {
+    "test": "testcafe chrome tests/index-test.js --app \"node server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankurkakroo2/test-cafe-boilerplate.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/DevExpress/testcafe#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "1.8.4"
+  }
+}
