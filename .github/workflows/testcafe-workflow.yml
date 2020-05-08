@@ -4,12 +4,17 @@ on: [push]
 jobs:
   test:
     name: Run TestCafe
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Run tests
-        uses: DevExpress/testcafe-action@latest
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          version: latest
-          args: "chrome tests/index-test.js"
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run test
