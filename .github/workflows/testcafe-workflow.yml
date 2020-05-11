@@ -13,9 +13,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
 
-      # - name: Enter Url
-      #   uses: actions/input-url@master
-
       - name: Set Page Url
         uses: allenevans/set-env@v1.0.0
         with:
@@ -29,14 +26,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Test
-        run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
-
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with:
           version: latest
           args: "chrome tests/index-test.js"
-        env:
-          FIRST_NAME: Ankur-2
-          LAST_NAME: Kakroo
